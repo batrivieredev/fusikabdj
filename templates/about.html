@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="about-section container my-5">
+    <h1 class="text-center mb-4">À propos de Fusikab DJ</h1>
+    <p class="lead text-center">Notre mission est de transformer vos événements en expériences inoubliables grâce à notre expertise en animation musicale et en sonorisation.</p>
+
+    <h2 class="text-center mt-5">Notre Équipe</h2>
+    <div class="row mt-4">
+        <div class="col-md-4 text-center">
+            <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Membre 1" class="rounded-circle mb-3" width="150" height="150">
+            <h5>Jean Dupont</h5>
+            <p>Fondateur & DJ Principal</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Membre 2" class="rounded-circle mb-3" width="150" height="150">
+            <h5>Marie Curie</h5>
+            <p>Responsable Technique</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{{ url_for('static', filename='images/team3.jpg') }}" alt="Membre 3" class="rounded-circle mb-3" width="150" height="150">
+            <h5>Paul Martin</h5>
+            <p>Animateur & DJ</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
