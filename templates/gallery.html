@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 
-<link rel="stylesheet" href="static/css/gallery.css">
-
 {% block content %}
-<div class="gallery-section container my-5 fade-in">
-    <h1 class="text-center mb-4">Galerie</h1>
-    <p class="lead text-center">Découvrez nos moments forts en images.</p>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
 
-    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="gallery-section container my-5 fade-in">
+    <h1 class="text-center mb-2 gallery-title">Galerie</h1>
+    <p class="lead text-center gallery-subtitle">Découvrez nos moments forts en images.</p>
+
+    <!-- Carousel -->
+    <div id="galleryCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             {% for image in images %}
             <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
-                <img src="{{ url_for('static', filename='gallery/' ~ image) }}" class="d-block w-100" alt="Image {{ loop.index }}">
+                <img src="{{ url_for('static', filename='gallery/' ~ image) }}" class="d-block w-100 carousel-image" alt="Image {{ loop.index }}">
             </div>
             {% endfor %}
         </div>
@@ -24,16 +25,19 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-</div>
 
-<div class="thumbnail-gallery mt-4">
-    <h2 class="text-center">Toutes les images</h2>
-    <div class="d-flex flex-wrap justify-content-center">
-        {% for image in images %}
-        <div class="thumbnail m-2">
-            <img src="{{ url_for('static', filename='gallery/' ~ image) }}" alt="Thumbnail {{ loop.index }}" class="img-thumbnail">
+    <!-- Thumbnails -->
+    <div class="thumbnail-gallery mt-4">
+        <h2 class="text-center mb-3">Toutes les images</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            {% for image in images %}
+            <div class="thumbnail m-2">
+                <img src="{{ url_for('static', filename='gallery/' ~ image) }}" alt="Thumbnail {{ loop.index }}" class="img-thumbnail">
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </div>
+
+<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
 {% endblock %}

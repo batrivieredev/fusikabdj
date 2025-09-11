@@ -1,31 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Initialize the carousel
+    // CAROUSEL AUTO-SLIDE
     const carousel = document.querySelector("#galleryCarousel");
     if (carousel) {
         let currentIndex = 0;
         const slides = carousel.querySelectorAll(".carousel-item");
         const totalSlides = slides.length;
 
-        // Function to show a specific slide
         function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove("active");
-                if (i === index) {
-                    slide.classList.add("active");
-                }
-            });
+            slides.forEach((slide, i) => slide.classList.remove("active"));
+            if (slides[index]) slides[index].classList.add("active");
         }
 
-        // Auto-slide functionality
         setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            showSlide(currentIndex);
-        }, 5000); // Change slide every 5 seconds
+            if (totalSlides > 0) {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                showSlide(currentIndex);
+            }
+        }, 5000);
     }
-});
 
-// Full-size image modal functionality
-document.addEventListener("DOMContentLoaded", function () {
+    // MODAL IMAGE
     const modal = document.createElement("div");
     modal.id = "imageModal";
     modal.style.display = "none";
@@ -34,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.left = "0";
     modal.style.width = "100%";
     modal.style.height = "100%";
-    modal.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+    modal.style.backgroundColor = "rgba(0,0,0,0.8)";
     modal.style.zIndex = "1000";
     modal.style.justifyContent = "center";
     modal.style.alignItems = "center";
@@ -59,21 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll(".carousel-item img, .thumbnail img").forEach(img => {
         img.addEventListener("click", () => {
-            console.log("Image clicked:", img.src); // Debug log
             modalImage.src = img.src;
-            console.log("Modal image source set to:", modalImage.src); // Debug log
             modal.style.display = "flex";
-            console.log("Modal display set to flex"); // Debug log
         });
     });
 
-    closeButton.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+    closeButton.addEventListener("click", () => modal.style.display = "none");
+    modal.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 });
