@@ -16,7 +16,10 @@ def services():
 
 @app.route('/gallery')
 def gallery():
-    return render_template('gallery.html')
+    import os
+    gallery_path = os.path.join(app.static_folder, 'gallery')
+    images = [f for f in os.listdir(gallery_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('gallery.html', images=images)
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():

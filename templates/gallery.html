@@ -23,4 +23,15 @@
         </button>
     </div>
 </div>
+
+<div class="thumbnail-gallery mt-4">
+    <h2 class="text-center">Toutes les images</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+        {% for image in images %}
+        <div class="thumbnail m-2">
+            <img src="{{ url_for('static', filename='gallery/' ~ image) }}" alt="Thumbnail {{ loop.index }}" class="img-thumbnail">
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

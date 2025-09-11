@@ -5,12 +5,12 @@ const urlsToCache = [
   "/static/css/style.css",
   "/static/js/gallery.js",
   "/static/manifest.json",
-  "/templates/index.html",
-  "/templates/about.html",
-  "/templates/services.html",
-  "/templates/gallery.html",
-  "/templates/contact.html",
-  "/templates/mentions.html"
+  "/",
+  "/about",
+  "/services",
+  "/gallery",
+  "/contact",
+  "/mentions"
 ];
 
 // Install event
