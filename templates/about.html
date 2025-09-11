@@ -5,15 +5,13 @@
 {% endblock %}
 
 {% block content %}
-<!-- Section À propos -->
-<div class="about-section container my-5 fade-in">
+<section class="about-section container my-5 fade-in">
     <h1 class="text-center mb-4">À propos de Fusikab DJ</h1>
     <p class="lead text-center">
         Notre mission est de transformer vos événements en expériences inoubliables
         grâce à notre expertise en animation musicale et en sonorisation.
     </p>
 
-    <!-- Notre Équipe -->
     <h2 class="text-center mt-5">Notre Équipe</h2>
     <div class="row mt-4">
 
@@ -53,7 +51,7 @@
         <!-- Stéphane -->
         <div class="col-md-4 mb-4">
             <div class="card team-card text-center shadow-lg h-100">
-                <img src="{{ url_for('static', filename='images/stéphane.png') }}"
+                <img src="{{ url_for('static', filename='images/stephane.png') }}"
                      alt="Stéphane DINAHET"
                      class="team-photo rounded-circle mx-auto mt-3">
                 <div class="card-body">
@@ -65,5 +63,5 @@
         </div>
 
     </div>
-</div>
+</section>
 {% endblock %}

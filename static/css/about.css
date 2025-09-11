@@ -1,42 +1,28 @@
 /* ===========================
-   ABOUT PAGE - FUSIKAB DJ
+   STYLE ABOUT PAGE - FUSIKAB DJ
    =========================== */
 
-/* SECTION GLOBALE */
+/* Section À propos */
 .about-section {
-    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(20,20,20,0.85));
-    padding: 60px 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    padding: 60px 0;
 }
 
-/* TITRES */
-.about-section h1 {
-    font-weight: 700;
-    color: #ffcc00;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
+.about-section h1,
 .about-section h2 {
-    font-weight: 600;
     color: #ffcc00;
     text-transform: uppercase;
+    font-weight: 700;
     letter-spacing: 1px;
-    margin-top: 40px;
-    margin-bottom: 20px;
 }
 
-/* TEXTE INTRO */
 .about-section p.lead {
-    max-width: 800px;
-    margin: auto;
     font-size: 1.1rem;
     opacity: 0.85;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
 }
 
-/* CARTES ÉQUIPE */
+/* Team Cards */
 .team-card {
     background-color: #1a1a1a;
     border: none;
@@ -49,60 +35,49 @@
     box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
 }
 
-/* PHOTO PROFIL */
-.team-photo {
-    width: 120px;
-    height: 120px;
+.team-card .team-photo {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border: 3px solid #ffcc00;
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.team-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
-}
-
-/* TEXTE DES CARTES */
-.card-title {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-top: 0.5rem;
-    font-weight: 600;
-}
-
-.card-subtitle {
-    font-size: 0.95rem;
+.team-card .card-title {
     color: #ffcc00;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.team-card .card-subtitle {
+    color: #f5f5f5;
     font-weight: 500;
-    margin-bottom: 0.5rem;
+    opacity: 0.9;
 }
 
-.card-text {
-    font-size: 0.9rem;
-    color: #d9d9d9;
+.team-card .card-text em {
+    font-size: 0.85rem;
+    color: #cccccc;
 }
 
-/* FADE-IN ANIMATION */
+/* Animations */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1.2s forwards;
+    animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 768px) {
-    .team-photo {
-        width: 100px;
-        height: 100px;
+    .team-card .team-photo {
+        width: 120px;
+        height: 120px;
     }
-
-    .about-section {
-        padding: 40px 15px;
+    .about-section h1,
+    .about-section h2 {
+        font-size: 1.5rem;
     }
 }
