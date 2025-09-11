@@ -1,0 +1,108 @@
+/* ===========================
+   ABOUT PAGE - FUSIKAB DJ
+   =========================== */
+
+/* SECTION GLOBALE */
+.about-section {
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(20,20,20,0.85));
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* TITRES */
+.about-section h1 {
+    font-weight: 700;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-weight: 600;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* TEXTE INTRO */
+.about-section p.lead {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+/* CARTES ÉQUIPE */
+.team-card {
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
+}
+
+/* PHOTO PROFIL */
+.team-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #ffcc00;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+}
+
+/* TEXTE DES CARTES */
+.card-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.card-subtitle {
+    font-size: 0.95rem;
+    color: #ffcc00;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #d9d9d9;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .team-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-section {
+        padding: 40px 15px;
+    }
+}

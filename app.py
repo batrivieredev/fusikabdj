@@ -4,7 +4,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    import os
+    gallery_path = os.path.join(app.static_folder, 'gallery_confiance')
+    images = [f for f in os.listdir(gallery_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('index.html', images=images)
 
 @app.route('/about')
 def about():
@@ -17,9 +20,10 @@ def services():
 @app.route('/gallery')
 def gallery():
     import os
-    gallery_path = os.path.join(app.static_folder, 'gallery')
+    gallery_path = os.path.join(app.static_folder, 'gallery_confiance')
     images = [f for f in os.listdir(gallery_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
-    return render_template('gallery.html', images=images)
+    print("Gallery images:", images)  # Debugging: Log the images list
+    return render_template('index.html', images=images)
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -31,3 +35,22 @@ def mentions():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/sonorisation')
+def sonorisation():
+    return render_template('sonorisation.html')
+
+@app.route('/lumieres')
+def lumieres():
+    return render_template('lumieres.html')
+
+@app.route('/animation_musicale')
+def animation_musicale():
+    return render_template('animation_musicale.html')
+
+@app.route('/engagement_ecoresponsable')
+def engagement_ecoresponsable():
+    return render_template('engagement_ecoresponsable.html')
+@app.route('/prestations_sur_mesure')
+def prestations_sur_mesure():
+    return render_template('prestations_sur_mesure.html')
