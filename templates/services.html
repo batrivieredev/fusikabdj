@@ -1,120 +1,121 @@
 {% extends "base.html" %}
 
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
 {% block content %}
-<link rel="stylesheet" href="static/css/index.css">
 
-<div class="services-preview container my-5 fade-in">
-    <h2 class="text-center mb-4">Nos Services</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+<div class="services-section container my-5 fade-in">
+    <h1 class="text-center mb-3">Nos Services</h1>
+    <p class="lead text-center">Retrouvez tous nos services pour des événements inoubliables, adaptés à vos besoins et vos envies.</p>
 
+    <!-- Services 4x2 -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-4">
         <!-- Sonorisation -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Sonorisation</h5>
-                    <p class="card-text">Un son de qualité pour toutes vos soirées.</p>
-                </div>
+            <div class="service-card text-center h-100">
+                <h3>Sonorisation</h3>
+                <p>Un son de qualité professionnelle pour vos événements, adapté à chaque espace et ambiance.</p>
             </div>
         </div>
 
         <!-- Lumières -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Lumières</h5>
-                    <p class="card-text">Des jeux de lumière pour une ambiance unique.</p>
-                </div>
+            <div class="service-card text-center h-100">
+                <h3>Lumières</h3>
+                <p>Des jeux de lumière dynamiques et des effets visuels pour transformer vos soirées.</p>
             </div>
         </div>
 
         <!-- Animation musicale -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Animation musicale</h5>
-                    <p class="card-text">DJ professionnels pour tous vos goûts musicaux.</p>
-                </div>
+            <div class="service-card text-center h-100">
+                <h3>Animation musicale</h3>
+                <p>DJ professionnels pour créer l’ambiance musicale parfaite selon vos goûts et vos invités.</p>
             </div>
         </div>
 
         <!-- Engagement écoresponsable -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <a href="{{ url_for('engagement_ecoresponsable') }}" class="text-decoration-none text-white">
-                        <h5 class="card-title">Engagement écoresponsable</h5>
-                        <p class="card-text">Des solutions durables pour vos événements.</p>
-                    </a>
-                </div>
+            <div class="service-card text-center h-100">
+                <a href="{{ url_for('engagement_ecoresponsable') }}" class="text-decoration-none text-white">
+                    <h3>Engagement écoresponsable</h3>
+                    <p>Des solutions durables pour vos événements, tout en conservant qualité et convivialité.</p>
+                </a>
             </div>
         </div>
 
         <!-- Prestations sur mesure -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <a href="{{ url_for('prestations_sur_mesure') }}" class="text-decoration-none text-white">
-                        <h5 class="card-title">Prestations sur mesure</h5>
-                        <p class="card-text">Des prestations adaptées à vos besoins.</p>
-                    </a>
-                </div>
+            <div class="service-card text-center h-100">
+                <a href="{{ url_for('prestations_sur_mesure') }}" class="text-decoration-none text-white">
+                    <h3>Prestations sur mesure</h3>
+                    <p>Des prestations personnalisées selon vos besoins, votre budget et votre thème.</p>
+                </a>
             </div>
         </div>
 
+        <!-- Vidéo & Projection -->
+        <div class="col">
+            <div class="service-card text-center h-100">
+                <a href="{{ url_for('video_projection') }}" class="text-decoration-none text-white">
+                    <h3>Vidéo & Projection</h3>
+                    <p>Immortalisez vos événements avec des projections vidéo, montages et live streaming.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Animation interactive -->
+        <div class="col">
+            <div class="service-card text-center h-100">
+                <a href="{{ url_for('animation_interactive') }}" class="text-decoration-none text-white">
+                    <h3>Animation interactive</h3>
+                    <p>Impliquez vos invités grâce à des quiz, karaokés et interactions via leur téléphone.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Conseil & Coaching -->
+        <div class="col">
+            <div class="service-card text-center h-100">
+                <h3>Conseil & Coaching</h3>
+                <p>Accompagnement personnalisé pour créer vos playlists et harmoniser musique, lumière et décoration.</p>
+            </div>
+        </div>
     </div>
+
+    <!-- Types d'événements -->
+    <div class="event-types mt-5">
+        <h2 class="text-center mb-4">Pour tous types d’événements</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="event-card text-center h-100">
+                    <h4>Mariages</h4>
+                    <p>Des moments inoubliables grâce à une ambiance musicale et lumineuse sur mesure.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="event-card text-center h-100">
+                    <h4>Anniversaires</h4>
+                    <p>Des playlists personnalisées et des animations pour célébrer chaque âge et style.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="event-card text-center h-100">
+                    <h4>Soirées privées</h4>
+                    <p>Un son, une lumière et une ambiance adaptées pour vos soirées entre amis ou famille.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="event-card text-center h-100">
+                    <h4>Événements professionnels</h4>
+                    <p>Séminaires, conférences ou galas, nous créons l’ambiance adaptée à chaque occasion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
 {% endblock %}
-
-<div class="services-section container my-5 fade-in">
-    <h1 class="text-center mb-4">Nos Services</h1>
-    <p class="lead text-center">Découvrez nos prestations adaptées à tous vos événements.</p>
-
-    <div class="row mt-5">
-        <div class="col-md-6">
-            <h3>Mariages</h3>
-            <p>Faites de votre mariage un moment inoubliable avec une ambiance musicale sur mesure.</p>
-        </div>
-        <div class="col-md-6">
-            <h3>Anniversaires</h3>
-            <p>Des playlists personnalisées pour célébrer votre journée spéciale.</p>
-        </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <h3>Soirées privées</h3>
-            <p>Une animation musicale adaptée à vos soirées entre amis ou en famille.</p>
-        </div>
-        <div class="col-md-6">
-            <h3>Événements professionnels</h3>
-            <p>Des solutions sonores et lumineuses pour vos séminaires, conférences et galas.</p>
-        </div>
-    </div>
-
-    <h2 class="text-center mt-5">Tarifs</h2>
-    <table class="table table-bordered mt-3">
-        <thead class="table-dark">
-            <tr>
-                <th>Prestation</th>
-                <th>Tarif indicatif</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Mariages</td>
-                <td>À partir de 1200 €</td>
-            </tr>
-            <tr>
-                <td>Anniversaires</td>
-                <td>À partir de 900 €</td>
-            </tr>
-            <tr>
-                <td>Soirées privées</td>
-                <td>À partir de 1000 €</td>
-            </tr>
-            <tr>
-                <td>Événements professionnels</td>
-                <td>À partir de 1500 €</td>
-            </tr>
-        </tbody>
-    </table>
-</div>

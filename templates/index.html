@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
 {% block content %}
-<link rel="stylesheet" href="static/css/index.css">
+
 <!-- Hero Section -->
 <div class="hero-section text-center text-white py-5 fade-in">
     <div class="container">
@@ -36,55 +40,97 @@
 
         <!-- Sonorisation -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Sonorisation</h5>
-                    <p class="card-text">Un son de qualité pour toutes vos soirées.</p>
-                </div>
+            <div class="card bg-dark text-white h-100 service-card">
+                <a href="{{ url_for('sonorisation') }}" class="text-decoration-none text-white">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sonorisation</h5>
+                        <p class="card-text">Un son de qualité pour toutes vos soirées.</p>
+                    </div>
+                </a>
             </div>
         </div>
 
         <!-- Lumières -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Lumières</h5>
-                    <p class="card-text">Des jeux de lumière pour une ambiance unique.</p>
-                </div>
+            <div class="card bg-dark text-white h-100 service-card">
+                <a href="{{ url_for('lumieres') }}" class="text-decoration-none text-white">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lumières</h5>
+                        <p class="card-text">Des jeux de lumière pour une ambiance unique.</p>
+                    </div>
+                </a>
             </div>
         </div>
 
         <!-- Animation musicale -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Animation musicale</h5>
-                    <p class="card-text">DJ professionnels pour tous vos goûts musicaux.</p>
-                </div>
+            <div class="card bg-dark text-white h-100 service-card">
+                <a href="{{ url_for('animation_musicale') }}" class="text-decoration-none text-white">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Animation musicale</h5>
+                        <p class="card-text">DJ professionnels pour tous vos goûts musicaux.</p>
+                    </div>
+                </a>
             </div>
         </div>
 
         <!-- Engagement écoresponsable -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <a href="{{ url_for('engagement_ecoresponsable') }}" class="text-decoration-none text-white">
+            <div class="card bg-dark text-white h-100 service-card">
+                <a href="{{ url_for('engagement_ecoresponsable') }}" class="text-decoration-none text-white">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Engagement écoresponsable</h5>
                         <p class="card-text">Des solutions durables pour vos événements.</p>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
 
         <!-- Prestations sur mesure -->
         <div class="col">
-            <div class="card bg-dark text-white h-100">
-                <div class="card-body text-center">
-                    <a href="{{ url_for('prestations_sur_mesure') }}" class="text-decoration-none text-white">
+            <div class="card bg-dark text-white h-100 service-card">
+                <a href="{{ url_for('prestations_sur_mesure') }}" class="text-decoration-none text-white">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Prestations sur mesure</h5>
                         <p class="card-text">Des prestations adaptées à vos besoins.</p>
-                    </a>
-                </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Conseil & Coaching -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100 service-card">
+                <a href="{{ url_for('conseil_coaching') }}" class="text-decoration-none text-white">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Conseil & Coaching</h5>
+                        <p class="card-text">Création de playlists et harmonisation globale.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Vidéo & Projection -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100 service-card">
+                <a href="{{ url_for('video_projection') }}" class="text-decoration-none text-white">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Vidéo & Projection</h5>
+                        <p class="card-text">Écrans, projections et souvenirs vidéo.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Animation Interactive -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100 service-card">
+                <a href="{{ url_for('animation_interactive') }}" class="text-decoration-none text-white">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Animation Interactive</h5>
+                        <p class="card-text">Karaoké, quiz et jeux interactifs pour vos invités.</p>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -107,4 +153,5 @@
         {% endfor %}
     </div>
 </div>
+
 {% endblock %}

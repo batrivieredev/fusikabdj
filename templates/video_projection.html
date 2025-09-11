@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/video_projection.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="service-section container my-5 fade-in">
+    <h1 class="text-center mb-4">Vidéo & Projection</h1>
+
+    <p class="lead text-center">
+        Sublimez vos événements avec des projections vidéo et des effets visuels immersifs.
+    </p>
+
+    <h2>Nos équipements :</h2>
+    <ul class="service-list">
+        <li>Vidéoprojecteur haute définition pour des images nettes et lumineuses</li>
+        <li>Supports et installation professionnelle pour un rendu optimal sur tout type de surface</li>
+        <li>Création de visuels personnalisés adaptés à votre thème et à votre lieu</li>
+    </ul>
+
+    <h2>Nos services :</h2>
+    <ul class="service-list">
+        <li>Projections synchronisées avec la musique pour une ambiance immersive</li>
+        <li>Animations vidéo et contenus sur mesure : photos, clips, séquences animées</li>
+        <li>Montage rapide de souvenirs vidéo pour revivre l’événement</li>
+        <li>Conseils pour optimiser l’expérience visuelle et l’impact sur vos invités</li>
+    </ul>
+
+    <p>
+        Grâce à notre expertise, chaque projection devient un véritable spectacle visuel, apportant une dimension unique et mémorable à votre événement.
+    </p>
+</div>
+{% endblock %}

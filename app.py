@@ -68,3 +68,15 @@ def engagement_ecoresponsable():
 @app.route('/prestations_sur_mesure')
 def prestations_sur_mesure():
     return render_template('prestations_sur_mesure.html')
+
+@app.route('/conseil_coaching')
+def conseil_coaching():
+    return render_template('conseil_coaching.html')
+
+@app.route('/video_projection')
+def video_projection():
+    return render_template('video_projection.html')
+
+@app.route('/animation_interactive')
+def animation_interactive():
+    return render_template('animation_interactive.html')

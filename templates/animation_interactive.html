@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/animation_interactive.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="service-section container my-5 fade-in">
+    <h1 class="text-center mb-4">Animation Interactive</h1>
+
+    <p class="lead text-center">
+        Impliquez vos invités grâce à des animations interactives et participatives.
+    </p>
+
+    <h2>Nos animations :</h2>
+    <ul class="service-list">
+        <li>Karaoké et quiz musicaux pour animer la soirée</li>
+        <li>Choix de la musique par les invités directement depuis leur téléphone</li>
+        <li>Jeux interactifs pour créer des moments de compétition amusants et conviviaux</li>
+        <li>Animations personnalisées selon l'âge et le thème de votre événement</li>
+    </ul>
+
+    <h2>Avantages :</h2>
+    <ul class="service-list">
+        <li>Participation active des invités, garantissant des souvenirs mémorables</li>
+        <li>Ambiance festive et dynamique adaptée à toutes les générations</li>
+        <li>Solutions modulables en fonction de la taille et du type d’événement</li>
+    </ul>
+
+    <p>
+        L'animation interactive transforme chaque événement en expérience unique et engageante pour tous vos invités.
+    </p>
+</div>
+{% endblock %}

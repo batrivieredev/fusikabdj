@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/conseil_coaching.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="service-section container my-5 fade-in">
+    <h1 class="text-center mb-4">Conseil & Coaching</h1>
+
+    <p class="lead text-center">
+        Créez l'ambiance parfaite grâce à un accompagnement sur mesure pour votre événement.
+    </p>
+
+    <p>
+        Nos DJ vous aident à concevoir une playlist unique qui correspond à vos goûts et à ceux de vos invités.
+        Nous vous conseillons sur le choix des morceaux, le rythme et les transitions pour assurer une soirée fluide et mémorable.
+    </p>
+
+    <h2>Nos services :</h2>
+    <ul class="service-list">
+        <li>Création de playlists personnalisées selon vos envies et votre thème</li>
+        <li>Conseils pour harmoniser musique, lumière et décoration</li>
+        <li>Accompagnement avant, pendant et après l'événement</li>
+        <li>Recommandations pour les moments clés : cocktail, repas, ouverture de bal, soirée dansante</li>
+    </ul>
+
+    <h2>Pourquoi choisir notre coaching ?</h2>
+    <p>
+        Nous mettons notre expérience à votre disposition pour que chaque moment de votre événement soit pensé et orchestré avec soin.
+        Grâce à notre accompagnement, vous êtes sûr d’éviter les faux pas et de surprendre vos invités avec une ambiance inoubliable.
+    </p>
+</div>
+{% endblock %}

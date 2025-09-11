@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 
-<link rel="stylesheet" href="static/css/lumieres.css">
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lumieres.css') }}">
+{% endblock %}
 
 {% block content %}
-<div class="container my-5">
-    <h1>Lumières & Ambiance visuelle</h1>
-    <p>Pour sublimer l’ambiance de votre événement, nous installons un éclairage scénographique dynamique :</p>
-    <ul>
+<div class="lights-section container my-5 fade-in">
+    <h1 class="text-center mb-4">Lumières & Ambiance visuelle</h1>
+    <p class="lead text-center">
+        Pour sublimer l’ambiance de votre événement, nous installons un éclairage scénographique dynamique :
+    </p>
+    <ul class="lights-list">
         <li>Jeux de lumière synchronisés au rythme de la musique</li>
         <li>Lasers et effets visuels pour transformer votre piste de danse</li>
         <li>Mise en lumière personnalisée selon votre thème ou vos préférences</li>
     </ul>
-    <p>Une immersion visuelle complète, pensée pour faire vivre à vos invités une expérience festive unique.</p>
+    <p class="text-center">
+        Une immersion visuelle complète, pensée pour faire vivre à vos invités une expérience festive unique.
+    </p>
 </div>
 {% endblock %}
