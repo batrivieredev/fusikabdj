@@ -1,78 +1,80 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de confidentialité</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Politique de confidentialité de FUSIKAB DJ</h1>
-        <p>Dernière mise à jour : 12 mai 2024</p>
-    </header>
-    <main>
-        <section>
-            <h2>Introduction</h2>
-            <p>Cette politique de confidentialité décrit nos politiques et procédures relatives à la collecte, à l'utilisation et à la divulgation de vos informations lorsque vous utilisez le service et vous informe de vos droits à la vie privée et de la manière dont la loi vous protège.</p>
-            <p>En utilisant le Service, vous acceptez la collecte et l'utilisation d'informations conformément à la présente politique de confidentialité.</p>
-        </section>
-        <section>
-            <h2>Interprétation et définitions</h2>
-            <h3>Interprétation</h3>
-            <p>Les mots dont la lettre initiale est en majuscule ont des significations définies dans les conditions suivantes.</p>
-            <h3>Définitions</h3>
-            <ul>
-                <li><strong>Compte :</strong> Un compte unique créé pour vous permettre d'accéder à notre service.</li>
-                <li><strong>Société affiliée :</strong> Une entité qui contrôle, est contrôlée par ou est sous contrôle commun avec un parti.</li>
-                <li><strong>Cookies :</strong> Petits fichiers placés sur votre appareil par un site Web.</li>
-                <li><strong>Données personnelles :</strong> Toute information relative à une personne identifiée ou identifiable.</li>
-                <li><strong>Service :</strong> Le site Internet accessible depuis <a href="https://fusikabdj.fr">fusikabdj.fr</a>.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Collecte et utilisation de vos données personnelles</h2>
-            <h3>Types de données collectées</h3>
-            <p>Nous collectons les types de données suivants :</p>
-            <ul>
-                <li>Adresse e-mail</li>
-                <li>Prénom et nom</li>
-                <li>Numéro de téléphone</li>
-                <li>Adresse, État, Province, Code postal, Ville</li>
-                <li>Données d'utilisation</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Technologies de suivi et cookies</h2>
-            <p>Nous utilisons des cookies et des technologies similaires pour suivre l'activité sur notre service et stocker certaines informations.</p>
-            <h3>Types de cookies utilisés</h3>
-            <ul>
-                <li><strong>Cookies nécessaires/essentiels :</strong> Indispensables pour fournir les services disponibles sur le site.</li>
-                <li><strong>Cookies de fonctionnalité :</strong> Permettent de mémoriser vos choix pour une expérience personnalisée.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Utilisation de vos données personnelles</h2>
-            <p>Nous utilisons vos données personnelles pour :</p>
-            <ul>
-                <li>Fournir et maintenir notre service</li>
-                <li>Gérer votre compte</li>
-                <li>Vous contacter</li>
-                <li>Vous fournir des actualités et des offres spéciales</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Conservation et transfert de vos données personnelles</h2>
-            <p>Vos données personnelles sont conservées aussi longtemps que nécessaire aux fins énoncées dans cette politique.</p>
-        </section>
-        <section>
-            <h2>Contactez-nous</h2>
-            <p>Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter :</p>
-            <ul>
-                <li>Par email : <a href="mailto:contact@fusikabdj.fr">contact@fusikabdj.fr</a></li>
-                <li>Par téléphone : 0670069669</li>
-            </ul>
-        </section>
-    </main>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/politique_confidentialite.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="legal-section container my-5 fade-in">
+    <h1 class="text-center mb-3">Politique de confidentialité</h1>
+    <p class="text-center text-muted mb-5">Dernière mise à jour : 12 mai 2024</p>
+
+    <section class="mb-4">
+        <h2>Introduction</h2>
+        <p>Cette politique de confidentialité décrit nos politiques et procédures relatives à la collecte, à l'utilisation et à la divulgation de vos informations lorsque vous utilisez le service et vous informe de vos droits à la vie privée et de la manière dont la loi vous protège.</p>
+        <p>En utilisant le Service, vous acceptez la collecte et l'utilisation d'informations conformément à la présente politique de confidentialité.</p>
+    </section>
+
+    <section class="mb-4">
+        <h2>Interprétation et définitions</h2>
+        <h3>Interprétation</h3>
+        <p>Les mots dont la lettre initiale est en majuscule ont des significations définies dans les conditions suivantes.</p>
+        <h3>Définitions</h3>
+        <ul>
+            <li><strong>Compte :</strong> Un compte unique créé pour vous permettre d'accéder à notre service.</li>
+            <li><strong>Société affiliée :</strong> Une entité qui contrôle, est contrôlée par ou est sous contrôle commun avec un parti.</li>
+            <li><strong>Cookies :</strong> Petits fichiers placés sur votre appareil par un site Web.</li>
+            <li><strong>Données personnelles :</strong> Toute information relative à une personne identifiée ou identifiable.</li>
+            <li><strong>Service :</strong> Le site Internet accessible depuis <a href="https://fusikabdj.fr">fusikabdj.fr</a>.</li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>Collecte et utilisation de vos données personnelles</h2>
+        <h3>Types de données collectées</h3>
+        <p>Nous collectons les types de données suivants :</p>
+        <ul>
+            <li>Adresse e-mail</li>
+            <li>Prénom et nom</li>
+            <li>Numéro de téléphone</li>
+            <li>Adresse, État, Province, Code postal, Ville</li>
+            <li>Données d'utilisation</li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>Technologies de suivi et cookies</h2>
+        <p>Nous utilisons des cookies et des technologies similaires pour suivre l'activité sur notre service et stocker certaines informations.</p>
+        <h3>Types de cookies utilisés</h3>
+        <ul>
+            <li><strong>Cookies nécessaires/essentiels :</strong> Indispensables pour fournir les services disponibles sur le site.</li>
+            <li><strong>Cookies de fonctionnalité :</strong> Permettent de mémoriser vos choix pour une expérience personnalisée.</li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>Utilisation de vos données personnelles</h2>
+        <p>Nous utilisons vos données personnelles pour :</p>
+        <ul>
+            <li>Fournir et maintenir notre service</li>
+            <li>Gérer votre compte</li>
+            <li>Vous contacter</li>
+            <li>Vous fournir des actualités et des offres spéciales</li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>Conservation et transfert de vos données personnelles</h2>
+        <p>Vos données personnelles sont conservées aussi longtemps que nécessaire aux fins énoncées dans cette politique.</p>
+    </section>
+
+    <section class="mb-4">
+        <h2>Contactez-nous</h2>
+        <p>Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter :</p>
+        <ul>
+            <li>Par email : <a href="mailto:contact@fusikabdj.fr">contact@fusikabdj.fr</a></li>
+            <li>Par téléphone : 0652325357</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}

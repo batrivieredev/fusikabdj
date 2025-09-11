@@ -1,0 +1,60 @@
+/* ===========================
+   CGU - FUSIKAB DJ
+   =========================== */
+
+.legal-section {
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f5;
+}
+
+.legal-section h1 {
+    color: #ffcc00;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.legal-section h2 {
+    color: #ffcc00;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.legal-section p,
+.legal-section li {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.legal-section ul {
+    padding-left: 20px;
+}
+
+.legal-section li {
+    margin-bottom: 8px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .legal-section h1 {
+        font-size: 1.5rem;
+    }
+    .legal-section h2 {
+        font-size: 1.25rem;
+    }
+    .legal-section p, .legal-section li {
+        font-size: 0.95rem;
+    }
+}

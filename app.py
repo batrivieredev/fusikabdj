@@ -2,12 +2,26 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/cgv')
+def cgv():
+    return render_template('cgv.html')
+
+@app.route('/cgu')
+def cgu():
+    return render_template('cgu.html')
 @app.route('/')
 def index():
     import os
     gallery_path = os.path.join(app.static_folder, 'gallery_confiance')
     images = [f for f in os.listdir(gallery_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
     return render_template('index.html', images=images)
+@app.route('/politique_cookies')
+def politique_cookies():
+    return render_template('politique_cookies.html')
+
+@app.route('/politique_confidentialite')
+def politique_confidentialite():
+    return render_template('politique_confidentialite.html')
 
 @app.route('/about')
 def about():

@@ -42,6 +42,7 @@
     border: 3px solid #ffcc00;
 }
 
+/* Titres et sous-titres */
 .team-card .card-title {
     color: #ffcc00;
     font-weight: 600;
@@ -54,6 +55,14 @@
     opacity: 0.9;
 }
 
+/* Décalage uniquement pour Baptiste */
+.subtitle-baptiste {
+    display: inline-block;   /* permet de décaler sans être affecté par le text-center parent */
+    text-align: left;
+    margin-left: 15px;       /* décalage à gauche */
+}
+
+/* Texte en italique */
 .team-card .card-text em {
     font-size: 0.85rem;
     color: #cccccc;
@@ -79,5 +88,10 @@
     .about-section h1,
     .about-section h2 {
         font-size: 1.5rem;
+    }
+    .subtitle-baptiste {
+        display: block;
+        text-align: center;
+        margin-left: 0;
     }
 }

@@ -1,43 +1,115 @@
 {% extends "base.html" %}
 
-{% block content %}
-<div class="contact-section container my-5 fade-in">
-    <h1 class="text-center mb-4">Contactez-nous</h1>
-    <p class="lead text-center">Remplissez le formulaire ci-dessous pour toute demande ou réservation.</p>
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
 
-    <form method="POST" action="{{ url_for('contact') }}" class="mt-4">
-        <div class="mb-3">
-            <label for="name" class="form-label">Nom et Prénom</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+{% block content %}
+<section class="contact-section container my-5 fade-in">
+    <h1 class="text-center mb-4">Contactez-nous</h1>
+    <p class="lead text-center">
+        Remplissez le formulaire ci-dessous pour toute demande ou réservation.
+    </p>
+
+    <form method="POST" action="{{ url_for('contact') }}" class="mt-4 contact-form">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="nom" class="form-label">Nom*</label>
+                <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+            <div class="col-md-6">
+                <label for="prenom" class="form-label">Prénom*</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" required>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Adresse Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email*</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-md-6">
+                <label for="telephone" class="form-label">Téléphone*</label>
+                <input type="tel" class="form-control" id="telephone" name="telephone" required>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label">Numéro de Téléphone</label>
-            <input type="tel" class="form-control" id="phone" name="phone">
+
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <label for="code_postal" class="form-label">Code Postal*</label>
+                <input type="text" class="form-control" id="code_postal" name="code_postal" required>
+            </div>
+            <div class="col-md-6">
+                <label for="event_date" class="form-label">Date de l’évènement*</label>
+                <input type="date" class="form-control" id="event_date" name="event_date" required>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="event_date" class="form-label">Date de l'événement</label>
-            <input type="date" class="form-control" id="event_date" name="event_date" required>
-        </div>
-        <div class="mb-3">
-            <label for="location" class="form-label">Lieu de l'événement</label>
+
+        <div class="mt-3">
+            <label for="location" class="form-label">Lieu de l’évènement exact*</label>
             <input type="text" class="form-control" id="location" name="location" required>
         </div>
-        <div class="mb-3">
-            <label for="contact_method" class="form-label">Préférence de contact</label>
-            <select class="form-select" id="contact_method" name="contact_method">
-                <option value="email">Email</option>
-                <option value="phone">Téléphone</option>
-            </select>
+
+        <div class="mt-3">
+            <label class="form-label">Vous souhaitez être contacté par*</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="contact_method" id="contact_email" value="email" checked>
+                <label class="form-check-label" for="contact_email">Mail</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="contact_method" id="contact_phone" value="phone">
+                <label class="form-check-label" for="contact_phone">Téléphone</label>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Votre message</label>
-            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+
+        <div class="mt-3">
+            <label for="demande" class="form-label">Votre demande*</label>
+            <textarea class="form-control" id="demande" name="demande" rows="4" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
+
+        <div class="mt-3">
+            <label class="form-label">De quoi pensez-vous avoir besoin ?*</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="pack_regie" id="pack_regie">
+                <label class="form-check-label" for="pack_regie">PACK REGIE (Disponible pour événements régie, ex : Gala de Danse) : SONO + LUMIERE</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="sonorisation" id="sonorisation">
+                <label class="form-check-label" for="sonorisation">SONORISATION</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="barre_lumiere" id="barre_lumiere">
+                <label class="form-check-label" for="barre_lumiere">BARRE DE LUMIERE</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="lyres" id="lyres">
+                <label class="form-check-label" for="lyres">LYRES (x4)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="video_projecteur" id="video_projecteur">
+                <label class="form-check-label" for="video_projecteur">VIDEO PROJECTEUR</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="laser" id="laser">
+                <label class="form-check-label" for="laser">LASER</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="machine_fumee" id="machine_fumee">
+                <label class="form-check-label" for="machine_fumee">MACHINE A FUMEE</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="machine_etincelle" id="machine_etincelle">
+                <label class="form-check-label" for="machine_etincelle">MACHINE A ETINCELLE FROIDE</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="besoin[]" value="machine_brouillard" id="machine_brouillard">
+                <label class="form-check-label" for="machine_brouillard">MACHINE A BROUILLARD</label>
+            </div>
+        </div>
+
+        <div class="mt-4 text-center">
+            <button type="submit" class="btn btn-warning btn-lg">Envoyer</button>
+        </div>
     </form>
-</div>
+</section>
 {% endblock %}

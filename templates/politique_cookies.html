@@ -1,61 +1,61 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Cookies</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Politique de cookies pour FUSIKAB DJ</h1>
-        <p>Dernière mise à jour : 12 mai 2024</p>
-    </header>
-    <main>
-        <section>
-            <h2>Introduction</h2>
-            <p>Cette politique de cookies explique ce que sont les cookies et comment nous les utilisons. Vous devez lire cette politique afin de comprendre quel type de cookies nous utilisons ou les informations que nous collectons à l'aide des cookies et comment ces informations sont utilisées.</p>
-            <p>Les cookies ne contiennent généralement aucune information permettant d'identifier personnellement un utilisateur, mais les informations personnelles que nous stockons à votre sujet peuvent être liées aux informations stockées et obtenues à partir des cookies.</p>
-        </section>
-        <section>
-            <h2>Interprétation et définitions</h2>
-            <h3>Interprétation</h3>
-            <p>Les mots dont la lettre initiale est en majuscule ont des significations définies dans les conditions suivantes.</p>
-            <h3>Définitions</h3>
-            <ul>
-                <li><strong>La Société :</strong> FUSIKAB DJ, 22 RUE JEAN PAUL SARTRE 35135 CHANTEPIE.</li>
-                <li><strong>Cookies :</strong> Petits fichiers placés sur votre appareil par un site Web.</li>
-                <li><strong>Le site Internet :</strong> FUSIKAB DJ, accessible depuis <a href="https://fusikabdj.fr">fusikabdj.fr</a>.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>L'utilisation des Cookies</h2>
-            <h3>Type de cookies que nous utilisons</h3>
-            <p>Les cookies peuvent être des cookies « persistants » ou « de session » :</p>
-            <ul>
-                <li><strong>Cookies nécessaires/essentiels :</strong> Ces cookies sont indispensables pour fournir les services disponibles sur le site.</li>
-                <li><strong>Cookies de fonctionnalité :</strong> Ces cookies permettent de mémoriser vos choix pour une expérience personnalisée.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Vos choix concernant les cookies</h2>
-            <p>Si vous préférez éviter l'utilisation de cookies, vous pouvez désactiver les cookies dans votre navigateur. Cependant, certaines fonctionnalités du site pourraient ne pas fonctionner correctement.</p>
-            <p>Pour des instructions spécifiques, veuillez consulter les pages d'aide de votre navigateur :</p>
-            <ul>
-                <li><a href="https://support.google.com/accounts/answer/32050" target="_blank">Google Chrome</a></li>
-                <li><a href="http://support.microsoft.com/kb/278835" target="_blank">Internet Explorer</a></li>
-                <li><a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" target="_blank">Mozilla Firefox</a></li>
-                <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank">Safari</a></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Contactez-nous</h2>
-            <p>Si vous avez des questions sur cette politique de cookies, vous pouvez nous contacter :</p>
-            <ul>
-                <li>Par email : <a href="mailto:contact@fusikabdj.fr">contact@fusikabdj.fr</a></li>
-                <li>Par téléphone : 0670069669</li>
-            </ul>
-        </section>
-    </main>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/politique_cookies.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="legal-section container my-5 fade-in">
+    <h1 class="text-center mb-3">Politique de Cookies</h1>
+    <p class="text-center text-muted mb-5">Dernière mise à jour : 12 mai 2024</p>
+
+    <section class="mb-4">
+        <h2>Introduction</h2>
+        <p>Cette politique de cookies explique ce que sont les cookies et comment nous les utilisons. Vous devez lire cette politique afin de comprendre quel type de cookies nous utilisons ou les informations que nous collectons à l'aide des cookies et comment ces informations sont utilisées.</p>
+        <p>Les cookies ne contiennent généralement aucune information permettant d'identifier personnellement un utilisateur, mais les informations personnelles que nous stockons à votre sujet peuvent être liées aux informations stockées et obtenues à partir des cookies.</p>
+    </section>
+
+    <section class="mb-4">
+        <h2>Interprétation et définitions</h2>
+        <h3>Interprétation</h3>
+        <p>Les mots dont la lettre initiale est en majuscule ont des significations définies dans les conditions suivantes.</p>
+        <h3>Définitions</h3>
+        <ul>
+            <li><strong>La Société :</strong> FUSIKAB DJ, 22 Rue Jean Paul Sartre, 35135 Chantepie.</li>
+            <li><strong>Cookies :</strong> Petits fichiers placés sur votre appareil par un site Web.</li>
+            <li><strong>Le site Internet :</strong> FUSIKAB DJ, accessible depuis <a href="https://fusikabdj.fr">fusikabdj.fr</a>.</li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>L'utilisation des Cookies</h2>
+        <h3>Type de cookies que nous utilisons</h3>
+        <p>Les cookies peuvent être des cookies « persistants » ou « de session » :</p>
+        <ul>
+            <li><strong>Cookies nécessaires/essentiels :</strong> Ces cookies sont indispensables pour fournir les services disponibles sur le site.</li>
+            <li><strong>Cookies de fonctionnalité :</strong> Ces cookies permettent de mémoriser vos choix pour une expérience personnalisée.</li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>Vos choix concernant les cookies</h2>
+        <p>Si vous préférez éviter l'utilisation de cookies, vous pouvez désactiver les cookies dans votre navigateur. Cependant, certaines fonctionnalités du site pourraient ne pas fonctionner correctement.</p>
+        <p>Pour des instructions spécifiques, veuillez consulter les pages d'aide de votre navigateur :</p>
+        <ul>
+            <li><a href="https://support.google.com/accounts/answer/32050" target="_blank">Google Chrome</a></li>
+            <li><a href="http://support.microsoft.com/kb/278835" target="_blank">Internet Explorer</a></li>
+            <li><a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" target="_blank">Mozilla Firefox</a></li>
+            <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank">Safari</a></li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>Contactez-nous</h2>
+        <p>Si vous avez des questions sur cette politique de cookies, vous pouvez nous contacter :</p>
+        <ul>
+            <li>Par email : <a href="mailto:contact@fusikabdj.fr">contact@fusikabdj.fr</a></li>
+            <li>Par téléphone : 0652325357</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}

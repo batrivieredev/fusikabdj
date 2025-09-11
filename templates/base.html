@@ -59,9 +59,14 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="bg-dark text-white text-center py-4">
         <p>&copy; 2025 Fusikab DJ – Tous droits réservés</p>
-        <p><a href="{{ url_for('mentions') }}" class="text-white">Mentions légales</a></p>
+        <p>
+            <a href="{{ url_for('cgv') }}" class="text-white">CGV</a> |
+            <a href="{{ url_for('cgu') }}" class="text-white">CGU</a> |
+            <a href="{{ url_for('politique_cookies') }}" class="text-white">Politique cookies</a> |
+            <a href="{{ url_for('politique_confidentialite') }}" class="text-white">Politique confidentialité</a>
+        </p>
     </footer>
 
     <!-- Bootstrap JS -->

@@ -1,6 +1,70 @@
 {% extends "base.html" %}
 
 {% block content %}
+<link rel="stylesheet" href="static/css/index.css">
+
+<div class="services-preview container my-5 fade-in">
+    <h2 class="text-center mb-4">Nos Services</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+        <!-- Sonorisation -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sonorisation</h5>
+                    <p class="card-text">Un son de qualité pour toutes vos soirées.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lumières -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Lumières</h5>
+                    <p class="card-text">Des jeux de lumière pour une ambiance unique.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animation musicale -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Animation musicale</h5>
+                    <p class="card-text">DJ professionnels pour tous vos goûts musicaux.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Engagement écoresponsable -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body text-center">
+                    <a href="{{ url_for('engagement_ecoresponsable') }}" class="text-decoration-none text-white">
+                        <h5 class="card-title">Engagement écoresponsable</h5>
+                        <p class="card-text">Des solutions durables pour vos événements.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prestations sur mesure -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body text-center">
+                    <a href="{{ url_for('prestations_sur_mesure') }}" class="text-decoration-none text-white">
+                        <h5 class="card-title">Prestations sur mesure</h5>
+                        <p class="card-text">Des prestations adaptées à vos besoins.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
 <div class="services-section container my-5 fade-in">
     <h1 class="text-center mb-4">Nos Services</h1>
     <p class="lead text-center">Découvrez nos prestations adaptées à tous vos événements.</p>
@@ -54,4 +118,3 @@
         </tbody>
     </table>
 </div>
-{% endblock %}
