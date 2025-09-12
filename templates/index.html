@@ -15,8 +15,7 @@
                 <h1 class="display-4">
                     <img src="{{ url_for('static', filename='images/logo_fusikabdj_noir.jpg') }}"
                          alt="Logo Fusikab DJ"
-                         class="img-fluid"
-                         style="max-height: 120px;">
+                         class="img-fluid logo-partenaire">
                 </h1>
                 <p>Fusikab DJ, votre partenaire pour des événements inoubliables.</p>
                 <p>Nous animons vos soirées avec passion et professionnalisme, en adaptant la musique à vos envies.</p>
@@ -37,8 +36,7 @@
 <div class="services-preview container my-5 fade-in">
     <h2 class="text-center mb-4">Nos Services</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <!-- Les cartes services existantes -->
-        <!-- Sonorisation -->
+        <!-- Cartes services -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
                 <a href="{{ url_for('sonorisation') }}" class="text-decoration-none text-white">
@@ -50,7 +48,6 @@
             </div>
         </div>
 
-        <!-- Lumières -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
                 <a href="{{ url_for('lumieres') }}" class="text-decoration-none text-white">
@@ -62,7 +59,6 @@
             </div>
         </div>
 
-        <!-- Animation musicale -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
                 <a href="{{ url_for('animation_musicale') }}" class="text-decoration-none text-white">
@@ -74,7 +70,6 @@
             </div>
         </div>
 
-        <!-- Engagement écoresponsable -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
                 <a href="{{ url_for('engagement_ecoresponsable') }}" class="text-decoration-none text-white">
@@ -86,7 +81,6 @@
             </div>
         </div>
 
-        <!-- Prestations sur mesure -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
                 <a href="{{ url_for('prestations_sur_mesure') }}" class="text-decoration-none text-white">
@@ -98,7 +92,6 @@
             </div>
         </div>
 
-        <!-- Conseil & Coaching -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
                 <a href="{{ url_for('conseil_coaching') }}" class="text-decoration-none text-white">
@@ -110,7 +103,6 @@
             </div>
         </div>
 
-        <!-- Vidéo & Projection -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
                 <a href="{{ url_for('video_projection') }}" class="text-decoration-none text-white">
@@ -122,7 +114,6 @@
             </div>
         </div>
 
-        <!-- Animation Interactive -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
                 <a href="{{ url_for('animation_interactive') }}" class="text-decoration-none text-white">
@@ -163,8 +154,8 @@
         <div class="col">
             <div class="card bg-dark text-white h-100 partner-card">
                 <a href="{{ url_for('partenaire1_sallele5B') }}" class="text-decoration-none text-white">
-                    <img src="{{ url_for('static', filename='images/partenaire1_sallele5B/logo.png') }}"
-                         class="card-img-top rounded shadow-sm mb-2"
+                    <img src="{{ url_for('static', filename='images/partenaire1_sallele5B/logo.jpg') }}"
+                         class="card-img-top rounded shadow-sm mb-2 logo-partenaire-card"
                          alt="Salle le 5B">
                     <div class="card-body text-center">
                         <h5 class="card-title">Salle le 5B</h5>

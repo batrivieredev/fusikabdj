@@ -1,3 +1,8 @@
+/* ===========================
+   PARTENAIRE 1 - SALLE LE 5B
+   =========================== */
+
+/* BODY & TITRES */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #0d0d0d;
@@ -6,30 +11,46 @@ body {
 
 h1 {
     color: #ffcc00;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 20px;
 }
 
-/* Fade-in animation */
+/* FADE-IN ANIMATION */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1.2s forwards;
+    animation: fadeIn 1s forwards;
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Carousel */
+/* CAROUSEL */
+#galleryCarousel {
+    border-radius: 15px;
+    overflow: hidden;
+    max-height: 500px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    background-color: #0d0d0d;
+}
+
 .carousel-image {
     object-fit: cover;
     height: 500px;
     width: 100%;
     cursor: pointer;
     border-radius: 15px;
+    transition: transform 0.3s ease;
 }
 
-/* Modal */
+.carousel-image:hover {
+    transform: scale(1.02);
+}
+
+/* MODAL IMAGE */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -41,12 +62,14 @@ h1 {
     z-index: 1000;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .modal-image {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
 .close-btn {
@@ -54,6 +77,59 @@ h1 {
     top: 15px;
     right: 25px;
     font-size: 40px;
-    color: #fff;
+    color: #ffcc00;
     cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+/* PARTNER CARD */
+.partner-card {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.partner-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 20px rgba(255,204,0,0.5);
+}
+
+.partner-card img {
+    max-height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.partner-card h3 {
+    color: #ffcc00;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.partner-card p {
+    color: #f5f5f5;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    #galleryCarousel {
+        max-height: 300px;
+    }
+    .carousel-image {
+        height: 300px;
+    }
+    .modal-image {
+        max-width: 95%;
+        max-height: 80%;
+    }
 }

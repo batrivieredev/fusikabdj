@@ -98,3 +98,15 @@ h2 {
         margin-bottom: 20px;
     }
 }
+/* Logo sur Hero */
+.logo-partenaire {
+    max-height: 100px; /* taille réduite */
+    margin-bottom: 20px;
+}
+
+/* Logo dans les cartes partenaires */
+.logo-partenaire-card {
+    max-height: 100px; /* légèrement plus petit pour les cartes */
+    object-fit: contain;
+    margin: 0 auto 10px auto;
+}
