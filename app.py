@@ -93,5 +93,30 @@ def partenaire1_sallele5B():
 def partenaires():
     return render_template('partenaire/index_partenaires.html')
 
+@app.route('/partenaire2_chateau')
+def partenaire2_chateau():
+    images_path = os.path.join(app.static_folder, 'images/partenaire2_chateau')
+    images = [f for f in os.listdir(images_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('partenaire/partenaire2_chateau.html', images=images)
+
+@app.route('/partenaire3_photographe')
+def partenaire3_photographe():
+    images_path = os.path.join(app.static_folder, 'images/partenaire3_photographe')
+    images = [f for f in os.listdir(images_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('partenaire/partenaire3_photographe.html', images=images)
+
+@app.route('/partenaire4_traiteur')
+def partenaire4_traiteur():
+    images_path = os.path.join(app.static_folder, 'images/partenaire4_traiteur')
+    images = [f for f in os.listdir(images_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('partenaire/partenaire4_traiteur.html', images=images)
+
+@app.route('/partenaire5_deco')
+def partenaire5_deco():
+    images_path = os.path.join(app.static_folder, 'images/partenaire5_deco')
+    images = [f for f in os.listdir(images_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('partenaire/partenaire5_deco.html', images=images)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

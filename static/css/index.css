@@ -70,12 +70,36 @@ h2 {
     margin-bottom: 40px;
 }
 
-.card img {
-    transition: transform 0.3s ease;
+/* Cartes des partenaires de confiance */
+.card.h-100.d-flex {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card img:hover {
+.partenaire-logo-small {
+    width: 120px;   /* largeur fixe */
+    height: 80px;   /* hauteur fixe */
+    object-fit: contain;
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partenaire-logo-small:hover {
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+}
+
+/* Partenaire titre jaune / description blanche */
+.partenaire-text-jaune-blanc h5 {
+    color: #ffcc00; /* titre jaune */
+}
+
+.partenaire-text-jaune-blanc p {
+    color: #ffffff; /* texte descriptif blanc */
 }
 
 /* FADE-IN ANIMATION */
@@ -98,6 +122,7 @@ h2 {
         margin-bottom: 20px;
     }
 }
+
 /* Logo sur Hero */
 .logo-partenaire {
     max-height: 100px; /* taille réduite */

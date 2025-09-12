@@ -124,7 +124,6 @@
                 </a>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -132,16 +131,70 @@
 <div class="container my-5">
     <h2 class="text-center mb-4">Ils nous font confiance</h2>
     <div class="row row-cols-2 row-cols-md-4 g-4">
-        {% for image in images %}
+        <!-- Chaque logo reste dans une case uniforme de petite taille -->
         <div class="col">
-            <div class="card h-100">
-                <img src="{{ url_for('static', filename='gallery_confiance/' ~ image) }}"
-                     alt="Ils nous font confiance"
-                     class="card-img-top"
-                     style="object-fit: contain; height: 120px; width: 100%; padding: 5px;">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+                <a href="https://leilani35.wixsite.com/bougeetdanse" target="_blank">
+                    <img src="{{ url_for('static', filename='gallery_confiance/bougeetdanse.jpg') }}"
+                         alt="Bouge et Danse"
+                         class="card-img-top partenaire-logo-small">
+                </a>
             </div>
         </div>
-        {% endfor %}
+        <div class="col">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+                <a href="https://soljenitsyne.vendee.e-lyco.fr/" target="_blank">
+                    <img src="{{ url_for('static', filename='gallery_confiance/college_aizenay.jpg') }}"
+                         alt="Collège Aizenay"
+                         class="card-img-top partenaire-logo-small">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+                <a href="https://chantepieanimation.wixsite.com/35135" target="_blank">
+                    <img src="{{ url_for('static', filename='gallery_confiance/chantepie_animation.jpg') }}"
+                         alt="Chantepie Animation"
+                         class="card-img-top partenaire-logo-small">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+                <a href="https://www.rennesurbantrail.bzh/" target="_blank">
+                    <img src="{{ url_for('static', filename='gallery_confiance/urban_trail.jpg') }}"
+                         alt="Urban Trail"
+                         class="card-img-top partenaire-logo-small">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+                <a href="https://www.unionvtc.com/" target="_blank">
+                    <img src="{{ url_for('static', filename='gallery_confiance/viettaichi.jpg') }}"
+                         alt="Viettaichi"
+                         class="card-img-top partenaire-logo-small">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+                <a href="https://chantepie.fr/" target="_blank">
+                    <img src="{{ url_for('static', filename='gallery_confiance/ville_de_chantepie.jpg') }}"
+                         alt="Ville de Chantepie"
+                         class="card-img-top partenaire-logo-small">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+                <a href="https://yalla-raqasa.over-blog.com/" target="_blank">
+                    <img src="{{ url_for('static', filename='gallery_confiance/yallaraqasa.jpg') }}"
+                         alt="Yallaraqasa"
+                         class="card-img-top partenaire-logo-small">
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -153,11 +206,11 @@
         <!-- Partenaire 1 : Salle le 5B -->
         <div class="col">
             <div class="card bg-dark text-white h-100 partner-card">
-                <a href="{{ url_for('partenaire1_sallele5B') }}" class="text-decoration-none text-white">
+                <a href="{{ url_for('partenaire1_sallele5B') }}" class="text-decoration-none">
                     <img src="{{ url_for('static', filename='images/partenaire1_sallele5B/logo.jpg') }}"
                          class="card-img-top rounded shadow-sm mb-2 logo-partenaire-card"
                          alt="Salle le 5B">
-                    <div class="card-body text-center">
+                    <div class="card-body text-center partenaire-text-jaune-blanc">
                         <h5 class="card-title">Salle le 5B</h5>
                         <p class="card-text">Une salle moderne et modulable pour tous vos événements.</p>
                     </div>

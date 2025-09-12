@@ -5,23 +5,55 @@
 {% endblock %}
 
 {% block content %}
-<div class="container my-5 fade-in">
+<div class="partenaire-page container my-5 fade-in">
     <h1 class="text-center mb-4">Nos Partenaires</h1>
-    <p class="lead text-center mb-5">Découvrez nos partenaires de confiance et les lieux où nous intervenons pour vos événements.</p>
+    <p class="lead text-center mb-5">
+        Retrouvez nos partenaires classés par catégorie pour organiser vos événements en toute sérénité.
+    </p>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <!-- Partenaire 1 : Salle le 5B -->
-        <div class="col">
-            <div class="partner-card text-center h-100">
-                <a href="{{ url_for('partenaire1_sallele5B') }}" class="text-decoration-none text-white">
-                    <img src="{{ url_for('static', filename='images/partenaire1_sallele5B/logo.jpg') }}"
-                         alt="Salle le 5B" class="img-fluid rounded shadow-sm mb-3">
-                    <h3>Salle le 5B</h3>
-                    <p>Une salle moderne et modulable pour tous vos événements.</p>
-                </a>
+    <!-- Catégorie : Lieux de réception -->
+    <section class="mb-5">
+        <h2 class="mb-4">Lieux de réception</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Exemple : Salle le 5B -->
+            <div class="col">
+                <div class="partner-card text-center h-100">
+                    <a href="{{ url_for('partenaire1_sallele5B') }}" class="text-decoration-none text-white">
+                        <img src="{{ url_for('static', filename='images/partenaire1_sallele5B/logo.jpg') }}"
+                             alt="Salle le 5B" class="img-fluid rounded shadow-sm mb-3">
+                        <h3>Salle le 5B</h3>
+                        <p>Une salle moderne et modulable pour tous vos événements.</p>
+                    </a>
+                </div>
             </div>
         </div>
-        <!-- D'autres partenaires peuvent être ajoutés ici -->
-    </div>
+    </section>
+
+    <!-- Catégorie : Photographes -->
+    <section class="mb-5">
+        <h2 class="mb-4">Photographes</h2>
+        <div class="partner-alert text-center">
+            Nous sommes actuellement en recherche de partenaires photographes.<br>
+            Si vous souhaitez vous allier à nous, n’hésitez pas à nous <a href="{{ url_for('contact') }}">contacter</a>.
+        </div>
+    </section>
+
+    <!-- Catégorie : Traiteurs -->
+    <section class="mb-5">
+        <h2 class="mb-4">Traiteurs</h2>
+        <div class="partner-alert text-center">
+            Nous sommes actuellement en recherche de partenaires traiteurs.<br>
+            Si vous souhaitez vous allier à nous, n’hésitez pas à nous <a href="{{ url_for('contact') }}">contacter</a>.
+        </div>
+    </section>
+
+    <!-- Catégorie : Autres services -->
+    <section>
+        <h2 class="mb-4">Autres services</h2>
+        <div class="partner-alert text-center">
+            Nous sommes actuellement en recherche de partenaires dans les autres services.<br>
+            Si vous souhaitez vous allier à nous, n’hésitez pas à nous <a href="{{ url_for('contact') }}">contacter</a>.
+        </div>
+    </section>
 </div>
 {% endblock %}
