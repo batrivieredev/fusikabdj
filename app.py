@@ -1,7 +1,9 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
 
+# Pages légales
 @app.route('/cgv')
 def cgv():
     return render_template('cgv.html')
@@ -9,12 +11,7 @@ def cgv():
 @app.route('/cgu')
 def cgu():
     return render_template('cgu.html')
-@app.route('/')
-def index():
-    import os
-    gallery_path = os.path.join(app.static_folder, 'gallery_confiance')
-    images = [f for f in os.listdir(gallery_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
-    return render_template('index.html', images=images)
+
 @app.route('/politique_cookies')
 def politique_cookies():
     return render_template('politique_cookies.html')
@@ -22,6 +19,17 @@ def politique_cookies():
 @app.route('/politique_confidentialite')
 def politique_confidentialite():
     return render_template('politique_confidentialite.html')
+
+@app.route('/mentions')
+def mentions():
+    return render_template('mentions.html')
+
+# Pages principales
+@app.route('/')
+def index():
+    gallery_path = os.path.join(app.static_folder, 'gallery_confiance')
+    images = [f for f in os.listdir(gallery_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('index.html', images=images)
 
 @app.route('/about')
 def about():
@@ -33,23 +41,15 @@ def services():
 
 @app.route('/gallery')
 def gallery():
-    import os
     gallery_path = os.path.join(app.static_folder, 'gallery')
     images = [f for f in os.listdir(gallery_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
-    print("Gallery images:", images)  # Debug
     return render_template('gallery.html', images=images)
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template('contact.html')
 
-@app.route('/mentions')
-def mentions():
-    return render_template('mentions.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
+# Pages services individuelles
 @app.route('/sonorisation')
 def sonorisation():
     return render_template('sonorisation.html')
@@ -65,6 +65,7 @@ def animation_musicale():
 @app.route('/engagement_ecoresponsable')
 def engagement_ecoresponsable():
     return render_template('engagement_ecoresponsable.html')
+
 @app.route('/prestations_sur_mesure')
 def prestations_sur_mesure():
     return render_template('prestations_sur_mesure.html')
@@ -80,3 +81,17 @@ def video_projection():
 @app.route('/animation_interactive')
 def animation_interactive():
     return render_template('animation_interactive.html')
+
+# Pages partenaires
+@app.route('/partenaire1_sallele5B')
+def partenaire1_sallele5B():
+    images_path = os.path.join(app.static_folder, 'images/partenaire1_sallele5B')
+    images = [f for f in os.listdir(images_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('partenaire/partenaire1_sallele5B.html', images=images)
+
+@app.route('/partenaires')
+def partenaires():
+    return render_template('partenaire/index_partenaires.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)

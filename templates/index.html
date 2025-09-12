@@ -37,7 +37,7 @@
 <div class="services-preview container my-5 fade-in">
     <h2 class="text-center mb-4">Nos Services</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-
+        <!-- Les cartes services existantes -->
         <!-- Sonorisation -->
         <div class="col">
             <div class="card bg-dark text-white h-100 service-card">
@@ -151,6 +151,31 @@
             </div>
         </div>
         {% endfor %}
+    </div>
+</div>
+
+<!-- Nos Partenaires -->
+<div class="partners-preview container my-5 fade-in">
+    <h2 class="text-center mb-4">Nos Partenaires</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Partenaire 1 : Salle le 5B -->
+        <div class="col">
+            <div class="card bg-dark text-white h-100 partner-card">
+                <a href="{{ url_for('partenaire1_sallele5B') }}" class="text-decoration-none text-white">
+                    <img src="{{ url_for('static', filename='images/partenaire1_sallele5B/logo.png') }}"
+                         class="card-img-top rounded shadow-sm mb-2"
+                         alt="Salle le 5B">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Salle le 5B</h5>
+                        <p class="card-text">Une salle moderne et modulable pour tous vos événements.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Ajout futur d'autres partenaires -->
+
     </div>
 </div>
 

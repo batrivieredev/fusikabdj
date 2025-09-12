@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/partenaire/index_partenaires.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container my-5 fade-in">
+    <h1 class="text-center mb-4">Nos Partenaires</h1>
+    <p class="lead text-center mb-5">Découvrez nos partenaires de confiance et les lieux où nous intervenons pour vos événements.</p>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Partenaire 1 : Salle le 5B -->
+        <div class="col">
+            <div class="partner-card text-center h-100">
+                <a href="{{ url_for('partenaire1_sallele5B') }}" class="text-decoration-none text-white">
+                    <img src="{{ url_for('static', filename='images/partenaire1_sallele5B/logo.jpg') }}"
+                         alt="Salle le 5B" class="img-fluid rounded shadow-sm mb-3">
+                    <h3>Salle le 5B</h3>
+                    <p>Une salle moderne et modulable pour tous vos événements.</p>
+                </a>
+            </div>
+        </div>
+        <!-- D'autres partenaires peuvent être ajoutés ici -->
+    </div>
+</div>
+{% endblock %}
