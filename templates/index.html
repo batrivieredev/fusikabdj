@@ -19,7 +19,12 @@
                 </h1>
                 <p>Fusikab DJ, votre partenaire musical pour des événements inoubliables.</p>
                 <p>Nous animons vos soirées avec passion et professionnalisme, en adaptant la musique à vos envies.</p>
-                <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg mt-3">Contactez-nous</a>
+
+                <!-- Boutons côte à côte -->
+                <div class="d-flex flex-wrap gap-3 justify-content-center mt-3">
+                    <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg">Contactez-nous</a>
+                    <a href="{{ url_for('disponibilites') }}" class="btn btn-outline-warning btn-lg">Prendre RDV</a>
+                </div>
             </div>
 
             <!-- Image d'illustration -->
@@ -131,9 +136,9 @@
 <div class="container my-5">
     <h2 class="text-center mb-4">Ils nous font confiance</h2>
     <div class="row row-cols-2 row-cols-md-4 g-4">
-        <!-- Chaque logo reste dans une case uniforme de petite taille -->
+        <!-- Logos clients -->
         <div class="col">
-            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2 client-card">
                 <a href="https://leilani35.wixsite.com/bougeetdanse" target="_blank">
                     <img src="{{ url_for('static', filename='gallery_confiance/bougeetdanse.jpg') }}"
                          alt="Bouge et Danse"
@@ -142,7 +147,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2 client-card">
                 <a href="https://soljenitsyne.vendee.e-lyco.fr/" target="_blank">
                     <img src="{{ url_for('static', filename='gallery_confiance/college_aizenay.jpg') }}"
                          alt="Collège Aizenay"
@@ -151,7 +156,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2 client-card">
                 <a href="https://chantepieanimation.wixsite.com/35135" target="_blank">
                     <img src="{{ url_for('static', filename='gallery_confiance/chantepie_animation.jpg') }}"
                          alt="Chantepie Animation"
@@ -160,7 +165,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2 client-card">
                 <a href="https://www.rennesurbantrail.bzh/" target="_blank">
                     <img src="{{ url_for('static', filename='gallery_confiance/urban_trail.jpg') }}"
                          alt="Urban Trail"
@@ -169,7 +174,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2 client-card">
                 <a href="https://www.unionvtc.com/" target="_blank">
                     <img src="{{ url_for('static', filename='gallery_confiance/viettaichi.jpg') }}"
                          alt="Viettaichi"
@@ -178,7 +183,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2 client-card">
                 <a href="https://chantepie.fr/" target="_blank">
                     <img src="{{ url_for('static', filename='gallery_confiance/ville_de_chantepie.jpg') }}"
                          alt="Ville de Chantepie"
@@ -187,7 +192,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card h-100 d-flex align-items-center justify-content-center p-2">
+            <div class="card h-100 d-flex align-items-center justify-content-center p-2 client-card">
                 <a href="https://yalla-raqasa.over-blog.com/" target="_blank">
                     <img src="{{ url_for('static', filename='gallery_confiance/yallaraqasa.jpg') }}"
                          alt="Yallaraqasa"
