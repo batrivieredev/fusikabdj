@@ -225,6 +225,12 @@ def partenaire1_sallele5B():
 def partenaires():
     return render_template('partenaire/index_partenaires.html')
 
+@app.route('/partenaire2_nozchantepie')
+def partenaire2_nozchantepie():
+    images_path = os.path.join(app.static_folder, 'images/partenaire2_nozchantepie')
+    images = [f for f in os.listdir(images_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return render_template('partenaire/partenaire2_nozchantepie.html', images=images)
+
 @app.route('/partenaire2_chateau')
 def partenaire2_chateau():
     images_path = os.path.join(app.static_folder, 'images/partenaire2_chateau')

@@ -48,10 +48,14 @@ Ce projet consiste à refondre entièrement le site web de l'entreprise **FUSIKA
 
 1. **Installation** :
    - Assurez-vous d'avoir Python installé.
-   - Installez les dépendances nécessaires avec `pip install -r requirements.txt`.
+   - Créez un environnement virtuel avec `python3 -m venv venv`.
+   - Activez l'environnement virtuel avec :
+     - **Linux / macOS** : `source venv/bin/activate`
+     - **Windows (PowerShell)** : `venv\Scripts\Activate.ps1`
+   - Installez les dépendances nécessaires avec `pip3 install -r requirements.txt`.
 
 2. **Exécution** :
-   - Lancez le projet avec `python run.py`.
+   - Lancez le projet avec `python3 run.py`.
 
 3. **Personnalisation** :
    - Modifiez les fichiers dans `templates/` pour changer le contenu des pages.
@@ -67,7 +71,3 @@ Si vous souhaitez contribuer à ce projet :
 1. Forkez le dépôt.
 2. Créez une branche pour vos modifications.
 3. Soumettez une pull request.
-
-## Licence
-
-Ce projet est sous licence [Insérer le type de licence ici].

@@ -29,6 +29,24 @@
         </div>
     </section>
 
+    <!-- Catégorie : Autres services -->
+    <section class="mb-5">
+        <h2 class="mb-4">Autres services</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- NOZ Chantepie -->
+            <div class="col">
+                <div class="partner-card text-center h-100">
+                    <a href="{{ url_for('partenaire2_nozchantepie') }}" class="text-decoration-none text-white">
+                        <img src="{{ url_for('static', filename='images/partenaire2_nozchantepie/logo.jpg') }}"
+                             alt="NOZ Chantepie" class="img-fluid rounded shadow-sm mb-3">
+                        <h3>NOZ Chantepie</h3>
+                        <p>Magasin de déstockage proposant une large gamme de produits pour vos événements à petits prix.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Catégorie : Photographes -->
     <section class="mb-5">
         <h2 class="mb-4">Photographes</h2>
@@ -43,15 +61,6 @@
         <h2 class="mb-4">Traiteurs</h2>
         <div class="partner-alert text-center">
             Nous sommes actuellement en recherche de partenaires traiteurs.<br>
-            Si vous souhaitez vous allier à nous, n’hésitez pas à nous <a href="{{ url_for('contact') }}">contacter</a>.
-        </div>
-    </section>
-
-    <!-- Catégorie : Autres services -->
-    <section>
-        <h2 class="mb-4">Autres services</h2>
-        <div class="partner-alert text-center">
-            Nous sommes actuellement en recherche de partenaires dans les autres services.<br>
             Si vous souhaitez vous allier à nous, n’hésitez pas à nous <a href="{{ url_for('contact') }}">contacter</a>.
         </div>
     </section>
