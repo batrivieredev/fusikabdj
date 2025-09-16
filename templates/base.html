@@ -61,13 +61,13 @@
 
     <!-- FOOTER -->
     <footer class="bg-dark text-white text-center py-4">
-        <p>&copy;Site codé entièrement par Baptiste RIVIERE pour Fusikab DJ – Tous droits réservés – dernière MAJ : Sept 2025</p>
-        <p>
-            <a href="{{ url_for('cgv') }}" class="text-white">CGV</a> |
-            <a href="{{ url_for('cgu') }}" class="text-white">CGU</a> |
-            <a href="{{ url_for('politique_cookies') }}" class="text-white">Politique cookies</a> |
-            <a href="{{ url_for('politique_confidentialite') }}" class="text-white">Politique confidentialité</a>
-        </p>
+        <!-- AVIS GOOGLE (Elfsight) -->
+        <div class="container my-4">
+            <div>
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-98137dbb-aed1-4703-8b2b-ed257f9760a4" data-elfsight-app-lazy></div>
+            </div>
+        </div>
 
         <!-- Réseaux sociaux et contact -->
         <div class="mt-3">
@@ -77,6 +77,17 @@
             <a href="tel:+33652325357" class="text-white mx-2 fs-4"><i class="bi bi-telephone-fill"></i></a>
             <a href="mailto:fusikabdj@gmail.com" class="text-white mx-2 fs-4"><i class="bi bi-envelope-fill"></i></a>
             <a href="https://share.google/iyAfXLZLhyBaPfqcq" target="_blank" class="text-white mx-2 fs-4"><i class="bi bi-geo-alt-fill"></i></a>
+        </div>
+
+        <!-- TEXTE DE COPYRIGHT ET LIENS LÉGAUX -->
+        <div class="mt-4">
+            <p>&copy;Site codé entièrement par Baptiste RIVIERE pour Fusikab DJ – Tous droits réservés – dernière MAJ : Sept 2025</p>
+            <p>
+                <a href="{{ url_for('cgv') }}" class="text-white">CGV</a> |
+                <a href="{{ url_for('cgu') }}" class="text-white">CGU</a> |
+                <a href="{{ url_for('politique_cookies') }}" class="text-white">Politique cookies</a> |
+                <a href="{{ url_for('politique_confidentialite') }}" class="text-white">Politique confidentialité</a>
+            </p>
         </div>
     </footer>
 
